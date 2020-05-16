@@ -1,6 +1,0 @@
-"0","plot(x = Hitters$Hits, y = Hitters$HmRun, 
-     xlab = ""Hits"", ylab =""Home Runs"") #Plots the number of career home runs vs number of 1986 home runs
-"
-"2","Error in plot(x = Hitters$Hits, y = Hitters$HmRun, xlab = ""Hits"", ylab = ""Home Runs"") : 
-  object 'Hitters' not found
-"

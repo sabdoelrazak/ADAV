@@ -1,2 +1,0 @@
-"0","ggplot(data = Boston, aes(x = y_pred, y=medv)) +geom_point() +"
-"0","  xlab(""Predicted Y Values"") + ylab(""True Boston Housing Values"")"

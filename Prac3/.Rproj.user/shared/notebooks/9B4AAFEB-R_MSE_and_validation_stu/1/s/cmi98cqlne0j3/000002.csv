@@ -1,7 +1,0 @@
-"0","p_scatter <- ggplot(Boston, aes(x=lstat, y=medv)) + "
-"0","  geom_point(size = 1) + "
-"0","  geom_line(data= pred_dat, aes(x = y_pred_new, y = lstat)) + "
-"0","  geom_ribbon(aes(x = lstat, ymin= lower, ymax = dataframe12$upper), data=dataframe12) +"
-"0","  labs(x =""Lower status of the population (%)"", y= ""Median value of owner-occupied homes in $1000s"") "
-"0","p_scatter"
-"0",""

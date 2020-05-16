@@ -1,1 +1,0 @@
-{"frames":[{"character_number":0,"end_character_number":0,"end_line_number":0,"file":"","func":"plot(x = Hitters$Hits, y = Hitters$HmRun, xlab = \"Hits\", ylab = \"Home Runs\")","line_number":0}],"message":"Error in plot(x = Hitters$Hits, y = Hitters$HmRun, xlab = \"Hits\", ylab = \"Home Runs\") : \n  object 'Hitters' not found\n"}

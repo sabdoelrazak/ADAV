@@ -1,8 +1,0 @@
-"0","dia.ex1good <- ggplot(data = diamonds, mapping = aes(x = price, y = carat, color = cut)) +
-  geom_point(shape=16) + 
-  labs(x = ""Price in USD"", y = ""Carat"", title = ""Price of Diamond by Carat"") + 
-  theme_minimal()
-"
-"2","Error in ggplot(data = diamonds, mapping = aes(x = price, y = carat, color = cut)) : 
-  could not find function ""ggplot""
-"
