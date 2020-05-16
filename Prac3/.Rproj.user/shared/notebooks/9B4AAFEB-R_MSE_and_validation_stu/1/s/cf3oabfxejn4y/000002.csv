@@ -1,0 +1,2 @@
+"0","pred_dat <- data.frame("
+"0","  lstat = seq(0,40, length.out = 1000))"

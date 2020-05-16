@@ -1,0 +1,8 @@
+"0","dataframe12 <- data.frame("
+"0","  medv = y_pred_95[,1],"
+"0","  lstat = pred_dat$lstat,"
+"0","  lower = y_pred_95[,2],"
+"0","  upper = y_pred_95[,3]"
+"0",")"
+"0",""
+"0","dataframe12"

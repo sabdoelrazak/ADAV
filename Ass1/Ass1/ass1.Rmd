@@ -1,0 +1,117 @@
+Saif Abdoelrazak, Charlotte de Jong, Koert Möllers
+
+
+We opted to choose for the dataset of Life Expectency Data, which contains the life expectancy of a number of countries in the period of 2000 to 2015. After having had a quick glance at the dataset, we figured it would be interesting to see how BMI and  impacts life expectancy around the globe in 2000 by way of regression and then compare it to the year 2015.
+
+Source for the data: https://www.kaggle.com/kumarajarshi/life-expectancy-who
+```{r}
+install.packages("plotrix")
+set.seed(1507)
+library(readr)
+library(ggplot2)
+library(readxl)
+library(dplyr)
+library(magrittr)
+library(ghibli)
+library(plotrix)
+```
+ 
+
+```{r}
+#"What impact does the average BMI and alcohol consumption of a country have on the life expectancy of a person in that country?"
+
+
+
+Life_Expectancy_Data <-read_csv("Life Expectancy Data.csv")
+
+# Remove the rows with N/A in the Life Expectancy column
+Life_Expectancy_Data <-Life_Expectancy_Data[!is.na(Life_Expectancy_Data$`Life expectancy`), ]
+
+ 
+
+Life_Expectancy_Data_2000 <- filter(Life_Expectancy_Data, Life_Expectancy_Data$Year == "2000")
+#View(Life_Expectancy_Data_2000)
+
+Life_Expectancy_Data_2015 <- filter(Life_Expectancy_Data, Life_Expectancy_Data$Year == "2015")
+#View(Life_Expectancy_Data_2015)
+#LEfilt <- covid %>% filter(iso_code == "OWID_WRL")
+
+ 
+
+
+```
+So Life Expectancy is an interesting outcome variable. It would be intriguing to see if we could predict it by looking at but we'll first need to check how it is distributed to get an idea of what the data looks like.
+
+In the following plot, we show that the average life expectancy increases with each year. This average is retrieved by taking the mean life expectancy of all countries per year. 
+
+--testplot--
+```{r}
+ggplot(data=average_LE_per_year, aes(x= Year, y=`Life expectancy`)) +
+  #geom_bar(stat="identity", fill="steelblue")+
+  geom_line() +
+  theme_minimal()
+  #geom_text(aes(label=round(`Life expectancy`, digits= 1)), vjust=-0.3, size=3.5)+
+  #scale_fill_ghibli_c()
+```
+
+```{r}
+# First we aggregate the life expectancy by year
+average_LE_per_year <- aggregate(`Life expectancy`~Year, data= Life_Expectancy_Data, FUN= mean )
+
+# Then we plot it using cplplot to show different colours per year of life
+clplot(average_LE_per_year$Year, average_LE_per_year$`Life expectancy`, main="Average Life Expectancy per Year", lwd=5, levels=c(67,68,69,70,71), col= ghibli_palette("PonyoLight"), showcuts=T , bty="n", xlab = "Year", ylab="Life Expectancy", )
+
+```
+The above plot shows the ten countries in the life expextancy data set that have the highest mean life expectancy in the years 2000-2015. The second plot shows the ten countries in the life expectancy data set that have the lowest mean life expectancy in the years 2000-2015.
+
+```{r}
+library(data.table)
+library(forcats)
+require(gridExtra)
+library(gtable)
+library(ggplot2)
+
+ 
+
+setDT(Life_Expectancy_Data)[, Country := fct_reorder(Country, -`Life expectancy`, mean)]
+Life_Expectancy_Data[, top_country := fct_other(Country, keep = head(levels(Country), 10))]
+head(Life_Expectancy_Data)
+highest_life_expectancy_per_year <-
+  ggplot(Life_Expectancy_Data[Life_Expectancy_Data$top_country != "Other"], aes(Year, `Life expectancy`, group = Country, colour=top_country)) + 
+  geom_point() + geom_line(size = 1) + theme_bw() + ylab("Life expectancy") + ggtitle("Top 10 countries with highest mean life expectancy in 2000-2015") +
+  scale_colour_manual(name = "Country", 
+                      values = c("green3", "orange", "blue", "red", "purple", "black", "pink", "yellow", "brown", "pink"))
+#highest_life_expectancy_per_year 
+
+ 
+
+setDT(Life_Expectancy_Data)[, Country := fct_reorder(Country, `Life expectancy`, mean)]
+Life_Expectancy_Data[, top_country := fct_other(Country, keep = head(levels(Country), 10))]
+head(Life_Expectancy_Data)
+lowest_life_expectancy_per_year <-
+  ggplot(Life_Expectancy_Data[Life_Expectancy_Data$top_country != "Other"], aes(Year, `Life expectancy`, group = Country, colour=top_country)) + 
+  geom_point() + geom_line(size = 1) + theme_bw() + ylab("Life expectancy") + ggtitle("Top 10 countries with lowest mean life expectancy in 2000-2015") +
+  scale_colour_manual(name = "Country", 
+                      values = c("green3", "orange", "blue", "red", "purple", "black", "pink", "yellow", "brown", "pink"))
+#lowest_life_expectancy_per_year
+
+ 
+
+grid.arrange(highest_life_expectancy_per_year, lowest_life_expectancy_per_year, ncol=1)
+```
+
+
+
+TODO Koerts plot (werkt niet)
+
+```{r}
+#scatter.smooth(x=Life_Expectancy_Data_2000$BMI, y=Life_Expectancy_Data_2000$`Life expectancy`, main="Life expectancy ~ BMI") 
+
+
+Life_Expectancy_Data_2000 %$% 
+  hist(Life_Expectancy_Data_2000$`Life expectancy`, freq = FALSE) 
+  lines(density(Life_Expectancy_Data_2000$`Life expectancy`), col = "red")
+
+  
+```
+

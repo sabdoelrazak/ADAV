@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1589203390780.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "1D017235",
+    "lastKnownWriteTime" : 7957688328213717356,
+    "last_content_update" : 1589203390780,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "159267F9",
+        "caption" : "boston_master",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=boston_master&cache_key=159267F9",
+        "displayedObservations" : 506,
+        "environment" : "",
+        "expression" : "boston_master",
+        "object" : "boston_master",
+        "preview" : 0,
+        "totalObservations" : 506,
+        "variables" : 15
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

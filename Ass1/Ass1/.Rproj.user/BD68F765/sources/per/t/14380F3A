@@ -1,0 +1,27 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1589446020863.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3596642032",
+    "id" : "14380F3A",
+    "lastKnownWriteTime" : 1589645864,
+    "last_content_update" : 1589645864119,
+    "path" : "~/GitHub/DatVis/DatVis/ADAV/Ass1/Ass1/ass1.Rmd",
+    "project_path" : "ass1.Rmd",
+    "properties" : {
+        "cursorPosition" : "67,19",
+        "last_setup_crc32" : "",
+        "scrollLine" : "64",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

@@ -1,0 +1,33 @@
+"0","library(data.table)"
+"2","data.table 1.12.8 using 2 threads (see ?getDTthreads).  Latest news: r-datatable.com
+"
+"2","
+Attaching package: ‘data.table’
+
+"
+"2","The following objects are masked from ‘package:dplyr’:
+
+    between, first, last
+
+"
+"0","library(forcats)"
+"0","require(gridExtra)"
+"2","Loading required package: gridExtra
+"
+"2","
+Attaching package: ‘gridExtra’
+
+"
+"2","The following object is masked from ‘package:dplyr’:
+
+    combine
+
+"
+"0","library(gtable)"
+"0","library(ggplot2)"
+"0",""
+"0"," "
+"0",""
+"0","setDT(Life_Expectancy_Data)[, Country := fct_reorder(Country, -`Life expectancy`, mean)]"
+"0","Life_Expectancy_Data[, top_country := fct_other(Country, keep = head(levels(Country), 10))]"
+"0","head(Life_Expectancy_Data)"

@@ -1,0 +1,7 @@
+"0","Life_Expectancy_Data %>%
+  ggplot(aes(x = Life_Expectancy_Data$Year, y = mean(Life_Expectancy_Data$`Life expectancy`))) + 
+  geom_bar() + 
+  theme_classic()
+"
+"2","Error: stat_count() can only have an x or y aesthetic.
+"

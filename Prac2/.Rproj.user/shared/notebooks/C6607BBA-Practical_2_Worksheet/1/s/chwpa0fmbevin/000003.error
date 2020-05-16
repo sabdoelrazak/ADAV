@@ -1,0 +1,1 @@
+{"frames":[],"message":"Error in ggplot(data = diamonds, mapping = aes(x = price, y = carat, color = cut)) : \n  could not find function \"ggplot\"\n"}

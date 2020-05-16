@@ -1,0 +1,4 @@
+"0","  mse <- sum((y_true - y_pred) ^2)/length(y_pred)
+"
+"2","Error: object 'y_true' not found
+"

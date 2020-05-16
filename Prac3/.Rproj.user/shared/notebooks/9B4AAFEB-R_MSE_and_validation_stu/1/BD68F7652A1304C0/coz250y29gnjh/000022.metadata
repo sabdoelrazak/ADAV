@@ -1,0 +1,1 @@
+{"conditions":[[1,"Use of `Boston$lstat` is discouraged. Use `lstat` instead."],[1,"Use of `Boston$medv` is discouraged. Use `medv` instead."]],"height":282.4474660074166,"size_behavior":0,"width":457.0000000000000}

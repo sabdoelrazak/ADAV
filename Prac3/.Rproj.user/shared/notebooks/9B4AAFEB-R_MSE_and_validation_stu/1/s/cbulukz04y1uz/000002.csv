@@ -1,0 +1,3 @@
+"0","p_scatter <- ggplot(Boston, aes(x=Boston$lstat, y=Boston$medv)) + geom_point(size = 1) + geom_line(data= pred_dat, aes(x = y_pred_new, y = lstat)) + "
+"0","labs(x =""Lower status of the population (%)"", y= ""Median value of owner-occupied homes in $1000s"") "
+"0","p_scatter "

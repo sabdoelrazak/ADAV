@@ -1,0 +1,6 @@
+"0","# First we aggregate the life expectancy by year"
+"0","average_LE_per_year <- aggregate(`Life expectancy`~Year, data= Life_Expectancy_Data, FUN= mean )"
+"0",""
+"0","# Then we plot it using cplplot to show different colours per year of life"
+"0","clplot(average_LE_per_year$Year, average_LE_per_year$`Life expectancy`, main=""Average Life Expectancy per Year"", lwd=5, levels=c(67,68,69,70,71), col= ghibli_palette(""PonyoLight""), showcuts=T , bty=""n"", xlab = ""Year"", ylab=""Life Expectancy"", )"
+"0",""

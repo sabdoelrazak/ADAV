@@ -1,0 +1,34 @@
+"0","for (i in 1:length(formulas)) {
+  mses_new <- lm_mse(as.formula(formulas[i]), baseball_train, baseball_valid)
+  mses_4 <- c(mses_4, mses_new)
+}
+for (i in 1:length(formulas)) {
+  mses_new <- lm_mse(as.formula(formulas[i]), baseball_train, baseball_valid)
+  mses_4 <- c(mses_4, mses_new)
+}
+min(mses_1)
+"
+"1","[1]"
+"1"," 111606.5"
+"1","
+"
+"0","min(mses_2)"
+"1","[1]"
+"1"," 102359.1"
+"1","
+"
+"0","min(mses_3)"
+"1","[1]"
+"1"," 97916.01"
+"1","
+"
+"0","min(mses_4)"
+"1","[1]"
+"1"," 97461.05"
+"1","
+"
+"0","formulas[which.min(mses_4)]"
+"1","[1]"
+"1"," ""Salary ~ Years + CAtBat + CHits + PutOuts"""
+"1","
+"

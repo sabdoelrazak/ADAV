@@ -1,0 +1,56 @@
+"0","aapl.stk <-read_csv(""https://www.nasdaq.com/api/v1/historical/AAPL/stocks/2019-10-16/2020-04-16"")
+"
+"2","Parsed with column specification:
+cols(
+  Date = [31mcol_character()[39m,
+  `Close/Last` = [31mcol_character()[39m,
+  Volume = [32mcol_double()[39m,
+  Open = [31mcol_character()[39m,
+  High = [31mcol_character()[39m,
+  Low = [31mcol_character()[39m
+)
+"
+"0","aapl.stk <-read_csv(""https://www.nasdaq.com/api/v1/historical/AAPL/stocks/2019-10-16/2020-04-16"")"
+"2","Parsed with column specification:
+cols(
+  Date = [31mcol_character()[39m,
+  `Close/Last` = [31mcol_character()[39m,
+  Volume = [32mcol_double()[39m,
+  Open = [31mcol_character()[39m,
+  High = [31mcol_character()[39m,
+  Low = [31mcol_character()[39m
+)
+"
+"0","csco.stk <- read_csv(""https://www.nasdaq.com/api/v1/historical/CSCO/stocks/2019-10-16/2020-04-16"")"
+"2","Parsed with column specification:
+cols(
+  Date = [31mcol_character()[39m,
+  `Close/Last` = [31mcol_character()[39m,
+  Volume = [32mcol_double()[39m,
+  Open = [31mcol_character()[39m,
+  High = [31mcol_character()[39m,
+  Low = [31mcol_character()[39m
+)
+"
+"0","csco.stk <- read_csv(""https://www.nasdaq.com/api/v1/historical/CSCO/stocks/2019-10-16/2020-04-16"")"
+"2","Parsed with column specification:
+cols(
+  Date = [31mcol_character()[39m,
+  `Close/Last` = [31mcol_character()[39m,
+  Volume = [32mcol_double()[39m,
+  Open = [31mcol_character()[39m,
+  High = [31mcol_character()[39m,
+  Low = [31mcol_character()[39m
+)
+"
+"0","fb.stk <- read_csv(""https://www.nasdaq.com/api/v1/historical/FB/stocks/2019-10-16/2020-04-16"")"
+"2","Parsed with column specification:
+cols(
+  Date = [31mcol_character()[39m,
+  `Close/Last` = [31mcol_character()[39m,
+  Volume = [32mcol_double()[39m,
+  Open = [31mcol_character()[39m,
+  High = [31mcol_character()[39m,
+  Low = [31mcol_character()[39m
+)
+"

@@ -1,0 +1,35 @@
+"0","""What impact does the average BMI and alcohol consumption of a country have on the life expectancy of a person in that country?"""
+"1","[1]"
+"1"," ""What impact does the average BMI and alcohol consumption of a country have on the life expectancy of a person in that country?"""
+"1","
+"
+"0","Life_Expectancy_Data <-read_csv(""Life Expectancy Data.csv"")"
+"2","Parsed with column specification:
+cols(
+  .default = col_double(),
+  Country = [31mcol_character()[39m,
+  Status = [31mcol_character()[39m
+)
+"
+"2","See spec(...) for full column specifications.
+"
+"0","# Remove the rows with N/A in the Life Expectancy column"
+"0","Life_Expectancy_Data <-Life_Expectancy_Data[!is.na(Life_Expectancy_Data$`Life expectancy`), ]"
+"0",""
+"0"," "
+"0",""
+"0","Life_Expectancy_Data_2000 <- filter(Life_Expectancy_Data, Life_Expectancy_Data$Year == ""2000"")"
+"0","View(Life_Expectancy_Data_2000)"
+"0",""
+"0",""
+"0",""
+"0",""
+"0"," "
+"0",""
+"0","Life_Expectancy_Data_2015 <- filter(Life_Expectancy_Data, Life_Expectancy_Data$Year == ""2015"")"
+"0","View(Life_Expectancy_Data_2015)"
+"0","#LEfilt <- covid %>% filter(iso_code == ""OWID_WRL"")"
+"0",""
+"0"," "
+"0",""
+"0",""

@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1588678234041.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "23408E3E",
+    "lastKnownWriteTime" : 1588678223,
+    "last_content_update" : 1588678234041,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "F2CC4F48",
+        "caption" : "aapl.stk",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=aapl.stk&cache_key=F2CC4F48",
+        "displayedObservations" : 126,
+        "environment" : "",
+        "expression" : "aapl.stk",
+        "object" : "aapl.stk",
+        "preview" : 0,
+        "totalObservations" : 126,
+        "variables" : 6
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
